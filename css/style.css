@@ -1,0 +1,138 @@
+#todoList label {
+  width: 76%;
+  min-width: 80rem;
+}
+#todoList li {
+  list-style-type: none;
+}
+.completed {
+}
+.uncompleted label {
+  color: #afa7a7;
+  text-decoration: line-through;
+}
+#todoList .btn {
+  margin-left: 10px;
+}
+
+/*  */
+.parent-edit-title-todo {
+  position: fixed;
+  top: -18rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  z-index: 20;
+}
+
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+/*  */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 400ms;
+  padding: .8rem 0 0 0;
+}
+
+.button .bi-pencil {
+  font-size: 1.6rem;
+  color: #ddd;
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #181717;
+}
+
+.button:hover .bi-pencil {
+  color: #181717;
+}
+
+.slide {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px);
+  background-color: #18171755;
+  opacity: 0;
+  transition: .3s;
+}
+
+.bi-edit {
+  border: 1px solid red;
+  width: 5rem;
+  height: 5rem;
+  /* padding: 5rem; */
+}
